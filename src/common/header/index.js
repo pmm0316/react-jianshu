@@ -108,7 +108,10 @@ class Header extends Component {
           onMouseEnter={handleMouseEnter}>
           <SearchInfoTitle>
             热门搜索
-            <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage)}>换一批</SearchInfoSwitch>
+            <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
+              <i ref={(icon) => this.spinIcon = icon} className="iconfont spin">&#xe851;</i>
+              换一批
+            </SearchInfoSwitch>
             <SearchInfoList>
               { pageList }
             </SearchInfoList>
@@ -120,7 +123,7 @@ class Header extends Component {
     }
   }
   render() {
-    const { focused, handleInputBlur, handleInputFocus } = this.props
+    const { focused, list, handleInputBlur, handleInputFocus } = this.props
     return(
       <HeaderWrapper>
         <Logo href="/"/>
@@ -138,10 +141,10 @@ class Header extends Component {
               in={focused}>
               <NavSearch
                 onBlur={handleInputBlur}
-                onFocus={handleInputFocus}
+                onFocus={() => handleInputFocus(list)}
                 className={focused ? 'focused' : ''}/>
             </CSSTransition>
-            <i className={focused ? 'focused iconfont' : 'iconfont'}>
+            <i className={focused ? 'focused iconfont zoom' : 'iconfont zoom'}>
               &#xe60d;
             </i>
             { this.getSearchInfo() }
@@ -169,8 +172,10 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleInputFocus() {
-      dispatch(actionCreators.getList())
+    handleInputFocus(list) {
+      if (!list.size) {
+        dispatch(actionCreators.getList())
+      }
       dispatch(actionCreators.searchFocus())
     },
     handleInputBlur() {
@@ -182,7 +187,16 @@ const mapDispatchToProps = (dispatch) => {
     handleMouseLeave() {
       dispatch(actionCreators.mouseLeave())
     },
-    handleChangePage(page, totalPage) {
+    handleChangePage(page, totalPage, spin) {
+      //[^0-9] 匹配非数字
+      let originAngle = spin.style.transform.replace(/[^0-9]/ig, '')
+      console.log(originAngle)
+      if (originAngle) {
+        originAngle = parseInt(originAngle, 10)
+      } else {
+        originAngle = 0
+      }
+      spin.style.transform = 'rotate(' + (originAngle + 360) + 'deg)'
       let jumpPage = 1
       if (page < totalPage) {
         jumpPage = page + 1
