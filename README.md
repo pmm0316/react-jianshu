@@ -1,5 +1,5 @@
 ## 启动项目
-yarn start
+yarn start 或者 npm start
 
 ## 安装的依赖
 yarn add react react-redux
