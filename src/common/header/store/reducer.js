@@ -24,7 +24,7 @@ export default (state=defaultState, action) => {
     case SEARCH_BLUR:
       return state.set('focused', false)
     case CHANGE_LIST:
-      return state.set('list', action.data)
+      return state.set('list', action.data).set('totalPage', action.totalPage)
     case MOUSE_ENTER:
       return state.set('mouseIn', true)
     case MOUSE_LEAVE:

@@ -93,7 +93,11 @@ class Header extends Component {
     if (focused || mouseIn) {
       const jsList = list.toJS()
       let pageList = []
-      for(let i = (page - 1) *10; i < page * 10; i++) {
+      let endPage = page * 10
+      if (page === totalPage) {
+        endPage = jsList.length
+      }
+      for(let i = (page - 1) *10; i < endPage; i++) {
         pageList.push(
           <SearchInfoItem key={jsList[i]}>{jsList[i]}</SearchInfoItem>
         )
@@ -180,11 +184,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleChangePage(page, totalPage) {
       let jumpPage = 1
-      console.log(totalPage)
       if (page < totalPage) {
         jumpPage = page + 1
       }
-      console.log(jumpPage)
       dispatch(actionCreators.changePage(jumpPage))
     }
   }
