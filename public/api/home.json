@@ -1,0 +1,79 @@
+{
+  "success": true,
+  "data": {
+    "imgList": [
+      {
+        "id": 4581,
+        "url": "http://upload.jianshu.io/admin_banners/web_images/4581/8cfb95afa4ac98683ce1b9ab0f835f425e6a7df5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+      },
+      {
+        "id": 4579,
+        "url": "http://upload.jianshu.io/admin_banners/web_images/4579/0e3caa20d3d30658dc4b393d1ea105baa7e78248.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+      },
+      {
+        "id": 4552,
+        "url": "http://upload.jianshu.io/admin_banners/web_images/4552/532152a690ad5a98d1c22eb48a316ca7ff428970.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540"
+      }
+    ],
+    "articleList": [
+      {
+        "id": 0,
+        "imgUrl": "//upload-images.jianshu.io/upload_images/1336555-65f0cdbfdbe8d868.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240",
+        "nickname": "珞珈小径",
+        "title": "你还记得那个《猫和老鼠》的动画片吗？",
+        "desc": "我是80后，童年曾经有一部非常有名的动画片叫做《猫和老鼠》。 动画片的内容已经记得不太深刻了。",
+        "commentNum": 1,
+        "likeNum": 4
+      },
+      {
+        "id": 1,
+        "imgUrl": "//upload-images.jianshu.io/upload_images/6767178-4922dd72fc41e408.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240",
+        "nickname": "易寒不易寒",
+        "title": "看完这篇文章，你的Linux基础就差不多了",
+        "desc": "传送门：看完这篇文章，你的Python基础就差不多了 前言 这篇文章基于传智播客的2016年的gitbook资料和视频资料，同时也融合了2018...",
+        "commentNum": 27,
+        "likeNum": 2017
+      },
+      {
+        "id": 2,
+        "imgUrl": "//upload-images.jianshu.io/upload_images/1897565-fab9c4e8d2b7b97c?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240",
+        "nickname": "物道",
+        "title": "年少不懂张爱玲，读懂已不再少年",
+        "desc": "不管你的条件有多差，总会有人在爱你； 不管你的条件有多好，也总有个人不爱你。” ──张爱玲 且不说戴着面具做人有多累，人的思想往往最难触摸和控...",
+        "commentNum": 36,
+        "likeNum": 529
+      },
+      {
+        "id": 3,
+        "imgUrl": "//upload-images.jianshu.io/upload_images/9741289-89a78e537d52f60c?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240",
+        "nickname": "珞珈小径",
+        "title": "作为一名程序员不要假装很努力，因为结果不会陪你演戏",
+        "desc": "我一直相信这样一句话：真正的危机，来源于在正确的时间做不正确的事。没有在正确的时间，为下一步做出积累，这才是危机的根源。 比如，当你迈过了30岁...",
+        "commentNum": 88,
+        "likeNum": 1090
+      }
+    ],
+    "recommendList": [
+      {
+        "id": 1,
+        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+      },
+      {
+        "id": 2,
+        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png"
+      },
+      {
+        "id": 3,
+        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+      },
+      {
+        "id": 4,
+        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+      },
+      {
+        "id": 5,
+        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+      }
+    ]
+  }
+}

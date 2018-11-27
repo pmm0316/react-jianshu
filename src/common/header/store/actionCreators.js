@@ -8,7 +8,7 @@ import {
   MOUSE_ENTER, MOUSE_LEAVE, CHANGE_PAGE
 } from './contants'
 import { fromJS } from 'immutable'
-import axios from 'axios'
+import request from '../../axios'
 
 const changeList = (data) => ({
   type: CHANGE_LIST,
@@ -38,12 +38,9 @@ export const changePage = (page) => ({
 
 export const getList = () => {
   return (dispatch) => {
-    // let url = 'https://www.easy-mock.com/mock/5bfb6f42db1e494ccae9b098/headerList'
-    let url = '/api/headerList.json'
-    axios.get(url).then(res => {
-      dispatch(changeList(res.data.data))
-    }).catch(err => {
-      console.log(err)
+    let url = '/headerList.json'
+    request(url).then(res => {
+      dispatch(changeList(res.data))
     })
   }
 }
